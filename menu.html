@@ -1,1 +1,43 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Thực đơn - Phương Nhung Healthy</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site-header"><div class="wrap header-inner"><div class="brand"><div class="logo">PN</div><div><h1>Phương Nhung Healthy</h1></div></div><nav class="nav-actions"><a class="btn" href="index.html">Trang chủ</a></nav></div></header><main class="wrap main-area"><section class="card"><h3>Toàn bộ thực đơn</h3><div class="search-row"><input id="searchAll" placeholder="Tìm món..." /><button id="clearAll">Xóa</button></div><div id="allMenu">Đang tải...</div></section></main><footer class="site-footer"><div class="wrap"><p>© 2025 Phương Nhung Healthy</p></div></footer><script>window.SHEET_CSV_URL="https://docs.google.com/spreadsheets/d/1kPWwVqBI4y4EueHCf8RaeqIOOWOmQ1bi7Ib9zcAq0xk/export?format=csv&gid=0";</script><script src="assets/main.js"></script></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phương Nhung Healthy</title>
+<meta name="description" content="Phương Nhung Healthy - Cơm healthy tại Lạng Sơn. Thực đơn thay đổi theo ngày, khách tự chọn món, giá theo thị trường.">
+<link rel="icon" href="assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header small">
+  <div class="wrap header-inner">
+    <div class="brand-text"><h1>Phương Nhung Healthy</h1></div>
+    <nav class="nav-actions"><a class="btn" href="index.html">Trang chủ</a><a class="btn ghost" href="contact.html">Liên hệ</a></nav>
+  </div>
+</header>
+<main class="wrap main-area">
+  <section class="card">
+    <h2>Thực đơn hôm nay</h2>
+    <p class="muted">Giá được cập nhật theo thị trường và khẩu phần. Chọn 'show' = TRUE trong Google Sheet để hiển thị món.</p>
+    <div id="menuGrid" class="grid">Đang tải thực đơn...</div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-left">
+      <h4>Phương Nhung Healthy</h4>
+      <p>17 Phố Muối, Phường Tam Thanh, TP. Lạng Sơn</p>
+      <p>Hotline: <a href="tel:0902032188">0902032188</a></p>
+      <p><a href="https://www.facebook.com/phuongnhunghealthy/" target="_blank">Fanpage</a> · <a href="https://www.facebook.com/nhung.ba.18" target="_blank">Messenger</a></p>
+    </div>
+    <div class="footer-right">
+      <p>© 2025 Phương Nhung Healthy</p>
+      <p class="muted">Website thiết kế bởi GPT-5 TTLK (demo)</p>
+    </div>
+  </div>
+</footer>
+<script>window.SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1kPWwVqBI4y4EueHCf8RaeqIOOWOmQ1bi7Ib9zcAq0xk/gviz/tq?tqx=out:json";</script>
+<script src="assets/main.js"></script>
+</body>
+</html>
