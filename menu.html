@@ -1,43 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Phương Nhung Healthy</title>
-<meta name="description" content="Phương Nhung Healthy - Cơm healthy tại Lạng Sơn. Thực đơn thay đổi theo ngày, khách tự chọn món, giá theo thị trường.">
-<link rel="icon" href="assets/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực đơn Healthy | Phương Nhung Healthy Bites</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header small">
-  <div class="wrap header-inner">
-    <div class="brand-text"><h1>Phương Nhung Healthy</h1></div>
-    <nav class="nav-actions"><a class="btn" href="index.html">Trang chủ</a><a class="btn ghost" href="contact.html">Liên hệ</a></nav>
-  </div>
-</header>
-<main class="wrap main-area">
-  <section class="card">
-    <h2>Thực đơn hôm nay</h2>
-    <p class="muted">Giá được cập nhật theo thị trường và khẩu phần. Chọn 'show' = TRUE trong Google Sheet để hiển thị món.</p>
-    <div id="menuGrid" class="grid">Đang tải thực đơn...</div>
+  <header>
+    <h1>Thực đơn Healthy</h1>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="menu.html" class="active">Thực đơn</a>
+      <a href="about.html">Giới thiệu</a>
+      <a href="blog.html">Bí quyết</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <section class="menu">
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1603048297723-cb57b96c3a7a" alt="Cơm gạo lứt ức gà">
+      <h3>Cơm gạo lứt ức gà</h3>
+      <p>Protein sạch, ít béo, no lâu – phù hợp ăn trưa hoặc sau tập.</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Salad rau củ trứng luộc">
+      <h3>Salad rau củ trứng luộc</h3>
+      <p>Bổ sung chất xơ, vitamin – giúp làn da sáng mịn.</p>
+    </div>
   </section>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-left">
-      <h4>Phương Nhung Healthy</h4>
-      <p>17 Phố Muối, Phường Tam Thanh, TP. Lạng Sơn</p>
-      <p>Hotline: <a href="tel:0902032188">0902032188</a></p>
-      <p><a href="https://www.facebook.com/phuongnhunghealthy/" target="_blank">Fanpage</a> · <a href="https://www.facebook.com/nhung.ba.18" target="_blank">Messenger</a></p>
-    </div>
-    <div class="footer-right">
-      <p>© 2025 Phương Nhung Healthy</p>
-      <p class="muted">Website thiết kế bởi GPT-5 TTLK (demo)</p>
-    </div>
-  </div>
-</footer>
-<script>window.SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1kPWwVqBI4y4EueHCf8RaeqIOOWOmQ1bi7Ib9zcAq0xk/gviz/tq?tqx=out:json";</script>
-<script src="assets/main.js"></script>
+
+  <footer>
+    <p>© 2025 Phương Nhung Healthy Bites</p>
+  </footer>
 </body>
 </html>

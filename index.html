@@ -1,113 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Phương Nhung Healthy</title>
-<meta name="description" content="Phương Nhung Healthy - Cơm healthy tại Lạng Sơn. Thực đơn thay đổi theo ngày, khách tự chọn món, giá theo thị trường.">
-<link rel="icon" href="assets/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phương Nhung Healthy Bites | Cơm Healthy chuẩn dinh dưỡng</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <div class="brand">
-      <div class="logo-wrap">
-        <svg width="56" height="56" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="100" height="100" rx="18" fill="#5BB97E"></rect>
-          <text x="50" y="58" font-family="Inter" font-weight="700" font-size="46" text-anchor="middle" fill="white">PN</text>
-        </svg>
-      </div>
-      <div class="brand-text">
-        <h1>Phương Nhung Healthy</h1>
-        <p class="tagline">Ăn sạch – Sống xanh – Mỗi ngày hạnh phúc</p>
-      </div>
-    </div>
-    <nav class="nav-actions">
-      <a class="btn" href="menu.html">Thực đơn</a>
-      <a class="btn ghost" href="contact.html">Liên hệ</a>
+  <header>
+    <h1>Phương Nhung Healthy Bites</h1>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="menu.html">Thực đơn</a>
+      <a href="about.html">Giới thiệu</a>
+      <a href="blog.html">Bí quyết</a>
+      <a href="contact.html">Liên hệ</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main class="wrap main-area">
-  <section class="hero card">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <h2>Ăn sạch — Tươi ngon — Lành mạnh mỗi ngày</h2>
-        <p class="lead">Phương Nhung Healthy mang đến bữa cơm cân bằng dinh dưỡng, tươi từ nguyên liệu địa phương. Chọn món, chọn khẩu phần — chúng tôi phục vụ tận tâm.</p>
-        <div class="cta-row">
-          <a class="btn large" href="menu.html">Xem thực đơn hôm nay</a>
-          <a class="btn outline" href="https://www.facebook.com/phuongnhunghealthy/" target="_blank">Fanpage</a>
-        </div>
-        <p class="muted small">Hotline: <a href="tel:0902032188">0902032188</a> · Địa chỉ: 17 Phố Muối, Phường Tam Thanh, TP. Lạng Sơn</p>
-      </div>
-      <div class="hero-right">
-        <div class="hero-image" aria-hidden="true"></div>
-      </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Ăn lành mạnh – Sống hạnh phúc</h2>
+      <p>Thực đơn cơm Healthy chuẩn vị – đủ dinh dưỡng – giúp bạn khỏe và đẹp mỗi ngày.</p>
+      <a href="menu.html" class="btn">Khám phá ngay</a>
     </div>
   </section>
 
-  <section class="card">
-    <h3>Về chúng tôi</h3>
-    <p>Phương Nhung Healthy ra đời từ mong muốn mang các bữa ăn sạch, đủ chất đến mọi người. Thực đơn thay đổi theo ngày, nguyên liệu tươi mới, phù hợp cho cả bữa trưa văn phòng và bữa tối gia đình.</p>
-  </section>
-
-  <section class="card">
-    <h3>Thực đơn nhanh</h3>
-    <div id="menuPreview" class="grid"></div>
-    <p class="muted small">Ghi chú: Giá theo thị trường và khẩu phần bạn chọn.</p>
-  </section>
-
-  <section class="card two-col">
-    <div>
-      <h4>Feedback khách hàng</h4>
-      <div id="reviewsMini"></div>
-      <p><a href="feedback.html">Xem tất cả đánh giá</a></p>
-    </div>
-    <aside>
-      <h4>Đặt món nhanh</h4>
-      <form id="orderForm">
-        <label>Tên</label><input name="name" required>
-        <label>SĐT</label><input name="phone" required>
-        <label>Chọn món (viết tên hoặc nhóm)</label><input name="items" placeholder="Ví dụ: Ức gà luộc, Súp lơ">
-        <label>Ghi chú</label><textarea name="note"></textarea>
-        <div class="form-row">
-          <button class="btn" type="submit">Gửi đơn</button>
-          <a class="btn ghost" href="https://m.me/phuongnhunghealthy" target="_blank">Nhắn Fanpage</a>
-        </div>
-        <p class="muted small">Khi gửi đơn, dữ liệu sẽ lưu trong Sheet Orders (do quản trị quản lý).</p>
-      </form>
-    </aside>
-  </section>
-
-  <section class="card">
-    <h3>Bản đồ</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3703.164313704711!2d106.75447781158218!3d21.85119685893907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36b54fb4f91a6c75%3A0xc28d84ff06760451!2zQ8OgIFBow6ogUGjGsMahbmcgTmh1bmcsIEPGoW0gSGVhbHRoeQ!5e0!3m2!1svi!2s!4v1762013117152!5m2!1svi!2s" loading="lazy"></iframe>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-left">
-      <h4>Phương Nhung Healthy</h4>
-      <p>17 Phố Muối, Phường Tam Thanh, TP. Lạng Sơn</p>
-      <p>Hotline: <a href="tel:0902032188">0902032188</a></p>
-      <p><a href="https://www.facebook.com/phuongnhunghealthy/" target="_blank">Fanpage</a> · <a href="https://www.facebook.com/nhung.ba.18" target="_blank">Messenger</a></p>
-    </div>
-    <div class="footer-right">
-      <p>© 2025 Phương Nhung Healthy</p>
-      <p class="muted">Website thiết kế bởi GPT-5 TTLK (demo)</p>
-    </div>
-  </div>
-</footer>
-
-<a class="floating zalo" href="https://zalo.me/0902032188" target="_blank" title="Chat Zalo - 0902032188"><img src="assets/zalo.png" alt="Zalo" width="56"></a>
-<a class="floating messenger" href="https://m.me/phuongnhunghealthy" target="_blank" title="Chat Messenger"><img src="assets/messenger.png" alt="Messenger" width="56"></a>
-
-<script>window.SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1kPWwVqBI4y4EueHCf8RaeqIOOWOmQ1bi7Ib9zcAq0xk/gviz/tq?tqx=out:json"; window.SHEET_ID = "1kPWwVqBI4y4EueHCf8RaeqIOOWOmQ1bi7Ib9zcAq0xk";</script>
-<script src="assets/main.js"></script>
+  <footer>
+    <p>© 2025 Phương Nhung Healthy Bites | Designed by GPT-5 TTLK Studio</p>
+  </footer>
 </body>
 </html>
