@@ -1,1 +1,104 @@
-<!doctype html><html lang='vi'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Admin</title><link rel='stylesheet' href='assets/style.css'></head><body><header class='site-header'><div class='wrap header-inner'><div class='brand'><div class='logo'>PN</div><div><h1>Admin</h1></div></div></div></header><main class='wrap main-area'><section class='card'><h3>Admin quick</h3><ol><li><a href='https://docs.google.com/spreadsheets/d/1kPWwVqBI4y4EueHCf8RaeqIOOWOmQ1bi7Ib9zcAq0xk/edit' target='_blank'>Mở Sheet</a></li><li>Headers: group,name,description,price,show,image</li></ol></section></main><footer class='site-footer'><div class='wrap'><p>Admin</p></div></footer></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quản trị — Phuong Nhung Healthy Food</title>
+  <meta name="description" content="Trang quản trị Phuong Nhung Healthy Food - quản lý thực đơn và blog.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-api.js"></script>
+</head>
+<body>
+  <div class="site-wrap">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><div class="logo">PN</div><div class="text">Phuong Nhung <span class="accent">Healthy</span> Food</div></a>
+        <nav class="nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="menu.html">Thực đơn</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Liên hệ</a>
+          <a href="admin.html" class="active">Quản trị</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div id="admin-locked" class="card">
+        <h2>Trang quản trị</h2>
+        <p class="text-muted">Nhập mật khẩu để tiếp tục.</p>
+      </div>
+
+      <div id="admin-layout" class="card" style="display:none">
+        <h1>Trang quản trị</h1>
+        <div class="admin-grid" style="margin-top:12px">
+          <div>
+            <div class="section-title"><h2>Quản lý Món (Accordion)</h2></div>
+            <div style="margin-bottom:8px;"><input id="search-dish" class="input" placeholder="Tìm món..."></div>
+            <div id="dish-list" style="margin-bottom:12px"></div>
+
+            <div class="card" style="margin-top:10px">
+              <h3>➕ Thêm món mới</h3>
+              <form id="add-dish-form">
+                <div class="form-row">
+                  <input id="dish-name" class="input" placeholder="Tên món" required>
+                  <select id="dish-group" class="input">
+                    <option>Gà</option><option>Bò</option><option>Cá</option><option>Lợn</option><option>Rau</option><option>Đậu</option><option>Trứng</option><option>Cơm</option><option>Chay</option><option>Khác</option>
+                  </select>
+                </div>
+                <div style="margin-top:8px">
+                  <input id="dish-img" class="input file" type="file" accept="image/*">
+                </div>
+                <div style="margin-top:8px"><button class="btn" type="submit">Thêm món</button></div>
+              </form>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <h3>🍱 Món hôm nay (Danh sách)</h3>
+              <ol id="today-dishes" style="padding-left:18px"></ol>
+              <div style="display:flex;gap:8px;margin-top:12px">
+                <button id="save-menu" class="btn">💾 Lưu Menu Hôm Nay</button>
+                <button id="reset-selection" class="btn secondary">Bỏ chọn tất cả</button>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>📝 Quản trị Blog</h3>
+              <form id="add-post-form">
+                <div style="margin-bottom:8px"><input id="post-title" class="input" placeholder="Tiêu đề" required></div>
+                <div style="margin-bottom:8px"><textarea id="post-content" class="input" rows="4" placeholder="Nội dung" required></textarea></div>
+                <div style="margin-bottom:8px"><input id="post-img" class="input file" type="file" accept="image/*"></div>
+                <div><button class="btn" type="submit">Đăng bài</button></div>
+              </form>
+              <h4 style="margin-top:12px">Bài viết gần đây</h4>
+              <div id="admin-posts" style="margin-top:8px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div><strong>Phuong Nhung Healthy Food</strong><br><small class="text-muted">© 2025</small></div>
+        <div>Giờ mở cửa: 10:00 - 19:30 • <a href="tel:+84902032188">0902.032.188</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const pwd = prompt('Nhập mật khẩu quản trị:');
+      if(pwd === '123'){ document.getElementById('admin-locked').style.display='none'; document.getElementById('admin-layout').style.display='block'; setTimeout(()=>{ if(window.initAdminPage) initAdminPage(); },200); }
+      else { alert('Sai mật khẩu'); location.href='index.html'; }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
